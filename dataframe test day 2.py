@@ -38,10 +38,9 @@ for row_obj in row_objects:
 
     data.append([row_obj.digits, increasing_order, decreasing_order, valid_differences, category])
 
-# Create DataFrame for visual inspection of errors to find where the logical conditions were failing
+# Create DataFrame
 df = pd.DataFrame(data, columns=['Report', 'Increasing Order', 'Decreasing Order', 'Valid Differences', 'Category'])
 #print(df)
 count_safe_reports = df['Category'].value_counts()
 print(count_safe_reports)
-
-'''Error checking for this puzzle included exporting the dataframe to csv format, applying conditional formatting and filtering for visual proof something wasn't working correctly in the check_differences() function. My gut was telling me something was happening with that comparison as a point of failure for getting a tally of "safe reports" as too low the first time I submitted the answer. Needed to see it in color to further assess the problem. Those lines are redacted to remove my local file path info before posting this to my GitHub repo.'''
+#df.to_csv(r'C:\Users\kelly\Desktop\tempReports.csv', mode='w', header=True, index=True)

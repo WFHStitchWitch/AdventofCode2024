@@ -25,7 +25,7 @@ for x, y in zip(working_list_1, working_list_2):
         working_list_3.append(-1*(int(y) - int(x)))
 print(working_list_3[0])
 
-with open(r"Day1_puzzleoutput", 'w+') as file_object_3:
+with open(r"Day1_puzzleoutput1", 'w+') as file_object_3:
     for item in working_list_3:
         file_object_3.write(str(item) + '\n')
 
